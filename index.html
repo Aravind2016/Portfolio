@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Personal Portfolio</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://kit.fontawesome.com/db91688598.js" crossorigin="anonymous"></script>
+
+    </head>
+<!-- -----------------Header---------------- -->
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <!-- <img src="images/logo.jpeg", class="logo"> -->
+                    <h1>Port<span>folio</span></h1>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#ACHIEVEMENTS">Achievements</a></li>
+                        <li><a href="#mywork">My Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+
+                </nav>
+                <div class="header-text">
+                    <h1>HI I AM<br> <span>ARAVIND REDDY</span> </h1>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+
+    <!-- -----------------About----------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="obout-col-1">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
+                            A leaf is a node with no children.
+                           Example 1:
+                            Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+                            Output: true
+                            Explanation: The root-to-leaf path with the target sum is shown.
+                            Example 2:
+                            Input: root = [1,2,3], targetSum = 5
+                            Output: false
+                            Explanation: There two root-to-leaf paths in the tree:
+                            
+                            There is no root-to-leaf path with sum = 5.</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                                <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('Internships')">Internships</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="Education">
+                                <ul>
+                                    <li><span>2020-current</span><br>B.Tech in B V Raju Institute of Technology</li>
+                                    <li><span>2018-2020</span><br>Intermediate in Narayana Junior College</li>
+                                    <li><span>2017-2018</span><br>10th in Paramita Heritage School</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Skills">
+                                <ul>
+                                    <li><span>Java programming</span><br>Problem Solving through Java</li>
+                                    <li><span>Data Structures and Algorithms</span><br></li>
+                                    <li><span>2017-2018</span><br>10th in Paramita Heritage School</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Internships">
+                                <ul>
+                                    <li><span>2020-current</span><br>B.Tech in B V Raju Institute of Technology</li>
+                                    <li><span>2018-2020</span><br>Intermediate in Narayana Junior College</li>
+                                    <li><span>2017-2018</span><br>10th in Paramita Heritage School</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- -----------------Achievements-------------- -->
+        <div id="ACHIEVEMENTS">
+            <div class="container">
+                <h1 class="sub-title">My Achievements</h1>
+                <div class="projects-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>PrepSat</h2>
+                        <p>Secured 217 rank among 90678 participants in PrepSAT(Hiring
+                            Jobathon) by PrepInsta.</p>
+                        <a href="https://drive.google.com/file/d/1vTeX9bgz5-Tg-3jdf6VMXHOtrI89F_Uk/view?usp=drive_link">see more</a>
+                        
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-book"></i>
+                        <h2>GeeksforGeeks</h2>
+                        <p>Successfully completed the course on Complete Interview Preparation.</p>
+                        <a href="https://drive.google.com/file/d/1ovIUVsqwQ0_x-HaAVUsBTpKhzTNMtrJ6/view?usp=drive_link">see more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trophy"></i>
+                        <h2>Hackathon</h2>
+                        <p>Stood 1st in Business Model Canvas Championship conducted
+                            by Institutes Innovation Council,BVRIT.</p>
+                        <a href="https://drive.google.com/file/d/1COpkD-9hFJbF97mPNVYxPEtEUYI9EVA3/view?usp=share_link">see more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- --------------------MyWork------------------ -->
+        <div id="mywork">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/pexels-cottonbro-studio-5473311.jpg">;
+                        <div class="layer">
+                            <h3>Student Exam Performance Prediction</h3>
+                            <p> This project involved analyzing how various factors,
+                                such as Gender, Ethnicity, Parental level of education,
+                                Lunch, and Test preparation course, affect student performance in tests.</p>
+                            <a href="https://github.com/Aravind2016/mlproject"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/pexels-lisa-fotios-16129688.jpg">;
+                        <div class="layer">
+                            <h3>CodePlayer</h3>
+                            <p> TThis project is a web Application which is used to write
+                                HTML,CSS,JavaScript code to create a web application.
+                                It consists of four sections and they are HTML column,
+                                CSS column, JavaScript column and Output column.</p>
+                            <a href="https://github.com/Aravind2016/Code-Player"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/pexels-pavel-danilyuk-8294554.jpg">;
+                        <div class="layer">
+                            <h3>Student Exam Performance Prediction</h3>
+                            <p> This project involved analyzing how various factors,
+                                such as Gender, Ethnicity, Parental level of education,
+                                Lunch, and Test preparation course, affect student performance in tests.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ----------------------contactme-------------- -->
+        <div id="contact">
+            <div class="conteiner">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="cnt-me">Contact me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>aravindbobbala@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+91 9014898170</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/Aravind2016"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/bobbala-aravind-2a2065251"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            var sidemen=document.getElementById("sidemenu");
+            function openmenu(){
+                sidemen.style.right="0";
+            }
+            function closemenu(){
+                sidemen.style.right="-250px";
+            }
+        </script>
+    </body>
+</html>
