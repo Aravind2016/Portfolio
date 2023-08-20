@@ -26,7 +26,7 @@
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#ACHIEVEMENTS">Achievements</a></li>
-                        <li><a href="#mywork">My Projects</a></li>
+                        <li><a href="#mywork">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <i class="fas fa-times" onclick="closemenu()"></i>
                     </ul>
@@ -65,26 +65,44 @@
                                 <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
                                 <p class="tab-links" onclick="opentab('Skills')">Skills</p>
                                 <p class="tab-links" onclick="opentab('Internships')">Internships</p>
+                                <p class="tab-links" onclick="opentab('Relevent-subjects')">Relevent subjects</p>
                             </div>
                             <div class="tab-contents active-tab" id="Education">
                                 <ul>
-                                    <li><span>2020-current</span><br>B.Tech in B V Raju Institute of Technology</li>
-                                    <li><span>2018-2020</span><br>Intermediate in Narayana Junior College</li>
-                                    <li><span>2017-2018</span><br>10th in Paramita Heritage School</li>
+                                    <li><span>B.Tech. (ECE) - 8.70 CGPA</span>
+                                        <br>B V Raju Institute of Technology<br>
+                                        2020-currently</li>
+                                    <li><span>Higher Secondary - 96.3%</span>
+                                        <br>Telangana Board of Intermediate Education<br>
+                                        2018-2020
+                                        </li>
+                                    <li><span>Secondary - 9.8 GPA</span>
+                                        <br>Telangana State Board of Secondary Education<br>
+                                        2017-2018</li>
                                 </ul>
                             </div>
                             <div class="tab-contents" id="Skills">
                                 <ul>
-                                    <li><span>Java programming</span><br>Problem Solving through Java</li>
-                                    <li><span>Data Structures and Algorithms</span><br></li>
-                                    <li><span>2017-2018</span><br>10th in Paramita Heritage School</li>
+                                    <li>Java Programming</li>
+                                    <li>Data Structures and Algorithms<br></li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
                                 </ul>
                             </div>
                             <div class="tab-contents" id="Internships">
                                 <ul>
-                                    <li><span>2020-current</span><br>B.Tech in B V Raju Institute of Technology</li>
-                                    <li><span>2018-2020</span><br>Intermediate in Narayana Junior College</li>
-                                    <li><span>2017-2018</span><br>10th in Paramita Heritage School</li>
+                                    <li><span>Virtual Internship</span><br>successfully completed 10 weeks AWS cloud Virtual Internship</li>
+                                    <li>Duration: May-July 2023</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Relevent-subjects">
+                                <ul>
+                                    
+                                    <li>Operating Systems</li>
+                                    <li>Computer Networks</li>
+                                    <li>Machine Learning</li>
                                 </ul>
                             </div>
                     </div>
@@ -172,17 +190,18 @@
                         <div class="social-icons">
                             <a href="https://github.com/Aravind2016"><i class="fa-brands fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/bobbala-aravind-2a2065251"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://twitter.com/Aravind87514921?t=cq3OrvXMajk7m6LRke6lEw&s=09"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com/aravind_._reddy?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" class="insta"><i class="fa-brands fa-square-instagram"></i></a>
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="text" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
+                        <div id="msg"></div>
                     </div>
                 </div>
             </div>
@@ -211,5 +230,22 @@
                 sidemen.style.right="-250px";
             }
         </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxoZiDOC6LFSwYIfJmQr4vpwpQ98S3499VfAWEtHDtwd5YsYkC1X1yl2La908qr1VZ6/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML="Message sent successfully";
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </body>
 </html>
